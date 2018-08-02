@@ -11,7 +11,7 @@ RSpec.describe HelloPageController, type: :controller do
     it "returns a success response" do
       get :hello, params: {}, session: valid_session
       expect(response).to be_success
-      expect(response.body).to include("Congratulations")
+      expect(response.body).to include("Hello I'm Online!")
       expect(response.content_type).to eq("text/html")
     end
   end
@@ -20,7 +20,7 @@ RSpec.describe HelloPageController, type: :controller do
     it "returns a success response" do
       post :hello, params: {}, session: valid_session
       expect(response).to be_success
-      expect(response.body).to include("Congratulations")
+      expect(response.body).to include("Hello I'm Online!")
       expect(response.content_type).to eq("text/html")
     end
   end
